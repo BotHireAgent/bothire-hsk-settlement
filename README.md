@@ -41,17 +41,17 @@ Addresses and policy transactions are in `deployments.json`. Earlier registry ve
 
 ## A recorded run
 
-2026-11-27, HSP QA environment, paid in USDC on Base Sepolia, recorded on HSK Chain testnet. Full evidence: [`agents/runs/run-1795765378070.json`](agents/runs/run-1795765378070.json).
+2026-11-27, HSP QA environment, paid in USDC on Base Sepolia, recorded on HSK Chain testnet. Full evidence: [`agents/runs/run-1795765900250.json`](agents/runs/run-1795765900250.json); an earlier run on the same registry is next to it.
 
 | Step | Result | Tx |
 |---|---|---|
-| Worker opens an HSP order | `BH-PAY-1795765320801-1f19252c`, 0.01 USD | |
-| Employer authorizes the spend on HSK Chain | 0.010003 USDC to the worker, within policy | [`0xab58a97a…`](https://testnet-explorer.hskchain.net/tx/0xab58a97a53221657785cfab60a98a3f3d848429cb5e861d8d661b2cdf9aad000) |
-| HSP settles the payment | 10003 raw USDC from employer to worker (HSP status `payment-safe`) | [`0xff1e9763…`](https://sepolia.basescan.org/tx/0xff1e976320e5671065784ea29548ed3ec458e7dcf05e4c3cbefab6304e9ba077) |
-| Worker verifies, delivers, records settlement | report hash `0x0dfcf727…` | [`0xaa445098…`](https://testnet-explorer.hskchain.net/tx/0xaa4450989adc64dcf31a50efdf0cee7615b1a7874a64d7f036f4551abbf3cb02) |
-| Employer checks the report and confirms delivery | status `Delivered` | [`0xd8f764e8…`](https://testnet-explorer.hskchain.net/tx/0xd8f764e8d39d2becac3e0a31af0d3cc865d749785e061ec615060ecaf74e832b) |
+| Worker opens an HSP order | `BH-PAY-1795765855399-4e398ea2`, 0.01 USD | |
+| Employer authorizes the spend on HSK Chain | 0.010002 USDC to the worker, within policy | [`0xf235bfdf…`](https://testnet-explorer.hskchain.net/tx/0xf235bfdfcf608a0bb20bdd2eaf2add7ea5c2ed0e71dceaa25e67402b1b52176a) |
+| HSP settles the payment | 10002 raw USDC from employer to worker (HSP status `payment-safe`) | [`0xd6a44619…`](https://sepolia.basescan.org/tx/0xd6a44619d83d414c1ba61090178e5e01d222d2706a5fcf68db61cab0da3e1e0e) |
+| Worker verifies, delivers, records settlement | report hash `0x03325d41…` | [`0x9242defa…`](https://testnet-explorer.hskchain.net/tx/0x9242defa6e79d3240c695d3cf234ee32e73ccfbfeb72378a966667001a5bf198) |
+| Employer checks the report and confirms delivery | status `Delivered` | [`0x7db44c53…`](https://testnet-explorer.hskchain.net/tx/0x7db44c532e2f8bb8bb49cc46f2099400857e6f14a5366413a17361f831045d1f) |
 
-The 0.000003 USDC above the 0.01 USD list price comes from HSP's quote (stablecoin rate). The employer accepts the HSP amount only up to the order's USD price plus `--max-fee-bps` (default 100 bps), and never above its budget.
+The 0.000002 USDC above the 0.01 USD list price comes from HSP's quote (stablecoin rate). The employer accepts the HSP amount only up to the order's USD price plus `--max-fee-bps` (default 100 bps), and never above its budget.
 
 ## Trust model, plainly
 
