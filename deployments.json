@@ -1,0 +1,30 @@
+{
+  "hskTestnet": {
+    "chainId": 133,
+    "BotHireSettlementRegistry": "0xf1874f384194DbdA348f301aCfa83593217AF94D",
+    "agents": {
+      "employer": "0xDcD7Ec5f9E0925B8317f558d03E1B9948EbEB1e6",
+      "worker": "0x03d641161219dFf311ba12DA996A925Ab33Eac6A",
+      "employerPolicyController": "0x22f9F68156C433Ee7b11565ac47ed32233Ede4c3"
+    },
+    "employerPolicy": {
+      "token": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "maxPerPayment": "50000",
+      "dailyCap": "200000",
+      "allowlistOnly": true,
+      "setPolicy": "0xcc594d1709c4ea77cb80fe6b21296086e42e2b98e3004c86aac242131f38b50b",
+      "setPayeeAllowed": "0xdf69c07e55b9a8e7a28cb6d0cc449e98ca2d8ddf91b61f346aae41b4c26bcad5",
+      "setController": "0xd9d922cdadbcb0f1ed21b4453787c7148e682f13ec7e812f72887d9a7cc4aaf2"
+    }
+  },
+  "previous": {
+    "hskTestnet-v1": {
+      "BotHireSettlementRegistry": "0x26CD6C96e576eF65E63F99b86b0af3F63421C6e9",
+      "note": "before review round 1; superseded. Its run is in agents/runs/v1/."
+    },
+    "hskTestnet-v2": {
+      "BotHireSettlementRegistry": "0x350A918B318b1e34E7F543Ea03102C75D2ef9a4e",
+      "note": "before review round 2; superseded. Its run is in agents/runs/v2/."
+    }
+  }
+}

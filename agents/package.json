@@ -1,0 +1,26 @@
+{
+  "name": "bothire-hsk-agents",
+  "version": "0.2.0",
+  "private": true,
+  "description": "BotHire employer and worker agents that pay each other through HashKey Settlement Platform (HSP) and record each hire on HSK Chain",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BotHireAgent/bothire-hsk-settlement"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "worker": "node worker.js",
+    "employer": "node employer.js",
+    "setup-policy": "node setup-policy.js",
+    "check": "node --check worker.js && node --check employer.js && node --check setup-policy.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "undici": "^7.30.2",
+    "viem": "^2.58.7"
+  }
+}

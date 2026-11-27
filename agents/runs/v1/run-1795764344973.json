@@ -1,0 +1,40 @@
+{
+  "startedAt": "2026-11-27T07:24:48.826Z",
+  "employer": "0xDcD7Ec5f9E0925B8317f558d03E1B9948EbEB1e6",
+  "finishedAt": "2026-11-27T07:25:44.973Z",
+  "worker": "0x03d641161219dFf311ba12DA996A925Ab33Eac6A",
+  "paymentRequestId": "BH-PAY-1795764290008-ebd8da",
+  "flowId": "ef9685ca-cbd9-4b50-9248-e4cf3a96cf8d",
+  "cartHash": "0x2b583f8de2f8b00528834af038eedf57c6a8cf36e59edaef0ee46de371add0ea",
+  "amountRaw": "10003",
+  "token": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+  "paymentChainId": 84532,
+  "paymentTx": "0xc20ca838a4c8fd93cdaead6ba135802386951ab8fd8c12462a4b65851b151273",
+  "registryChainId": 133,
+  "registry": "0x26CD6C96e576eF65E63F99b86b0af3F63421C6e9",
+  "authorizeTx": "0x2f7db2c4cd6461554652667087103355a3c6bee72c2505a54605dc67ac1512d4",
+  "recordTx": "0x20af396e8159cd4ee6d3baec423d5c5121b58a4206022e44571f4e06fb0e84ed",
+  "confirmTx": "0x92ae2d090fd0fe878c198708777f467a58a6214b4c893c0b374ce01c8e149647",
+  "deliverableHash": "0xc392b74c6083280278e801f2fb4d1e69e8050404c70475610dc610a55b753e18",
+  "deliverable": {
+    "kind": "wallet_report",
+    "address": "0x22f9F68156C433Ee7b11565ac47ed32233Ede4c3",
+    "generatedAt": "2026-11-27T07:25:32.527Z",
+    "chains": [
+      {
+        "chainId": 177,
+        "name": "HSK Chain",
+        "block": "30708599",
+        "balanceHsk": "0",
+        "txCount": 0
+      },
+      {
+        "chainId": 133,
+        "name": "HSK Chain Testnet",
+        "block": "36288839",
+        "balanceHsk": "0.03884669386798544",
+        "txCount": 3
+      }
+    ]
+  }
+}

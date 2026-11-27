@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+*.key
+*-key*.json
+agents/state/
+contracts/out/
+contracts/cache/
+contracts/broadcast/
