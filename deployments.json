@@ -1,4 +1,12 @@
 {
+  "hskMainnet": {
+    "chainId": 177,
+    "BotHireSettlementRegistry": "0x08ce5FF6206f1ACcB527F27CB770c8E0770EC200",
+    "deployTx": "0x4a6e38b9db2e5c27390f5b6ef9cbfb79a774b484778d85d973d1658aa687af29",
+    "deployer": "0x22f9F68156C433Ee7b11565ac47ed32233Ede4c3",
+    "explorer": "https://hsk.blockscout.com/address/0x08ce5FF6206f1ACcB527F27CB770c8E0770EC200",
+    "note": "Same bytecode as hskTestnet, source verified on Blockscout. The recorded hire runs on testnet because HSP QA settles on Base Sepolia."
+  },
   "hskTestnet": {
     "chainId": 133,
     "BotHireSettlementRegistry": "0xf1874f384194DbdA348f301aCfa83593217AF94D",

@@ -28,11 +28,20 @@ confirmDelivery (or rejectDelivery) ─▶ HSK Chain
 - **The worker agent** never trusts "paid" from anyone. It checks HSP's own record of the order (merchant attribution, payer, token, chain, amount, and the cart hash HSP signed into the order), then finds the exact USDC transfer in the settlement transaction on the payment chain. Only the payer can claim the job: it signs which order it paid. One payment buys exactly one job, and a paid job that fails half-way can be resumed by the same payer.
 - **`BotHireSettlementRegistry`** on HSK Chain holds no funds. It keeps each employer's spend policy per token (per-payment cap, daily cap, payee allowlist), the hire record keyed by (payer, HSP cart hash), and the delivery outcome.
 
+## Deployed (HSK Chain mainnet, chain 177)
+
+| | Address / tx |
+|---|---|
+| `BotHireSettlementRegistry` | [`0x08ce5FF6206f1ACcB527F27CB770c8E0770EC200`](https://hsk.blockscout.com/address/0x08ce5FF6206f1ACcB527F27CB770c8E0770EC200) (source verified) |
+| Deploy tx | [`0x4a6e38b9…`](https://hsk.blockscout.com/tx/0x4a6e38b9db2e5c27390f5b6ef9cbfb79a774b484778d85d973d1658aa687af29) |
+
+Same contract as on testnet. The recorded hire below runs on testnet, because HSP's QA environment settles payments on Base Sepolia; pointing the agents at mainnet is `HSK_NETWORK=mainnet` plus a production HSP endpoint.
+
 ## Deployed (HSK Chain testnet, chain 133)
 
 | | Address / tx |
 |---|---|
-| `BotHireSettlementRegistry` | [`0xf1874f384194DbdA348f301aCfa83593217AF94D`](https://testnet-explorer.hskchain.net/address/0xf1874f384194DbdA348f301aCfa83593217AF94D) |
+| `BotHireSettlementRegistry` | [`0xf1874f384194DbdA348f301aCfa83593217AF94D`](https://testnet-explorer.hskchain.net/address/0xf1874f384194DbdA348f301aCfa83593217AF94D) (source verified) |
 | Employer agent | `0xDcD7Ec5f9E0925B8317f558d03E1B9948EbEB1e6`: max 0.05 USDC per payment, 0.20 USDC per day, allowlisted worker only ([policy](https://testnet-explorer.hskchain.net/tx/0xcc594d1709c4ea77cb80fe6b21296086e42e2b98e3004c86aac242131f38b50b)) |
 | Policy controller | `0x22f9F68156C433Ee7b11565ac47ed32233Ede4c3` ([setController](https://testnet-explorer.hskchain.net/tx/0xd9d922cdadbcb0f1ed21b4453787c7148e682f13ec7e812f72887d9a7cc4aaf2)); the agent itself can no longer raise its limits |
 | Worker agent | `0x03d641161219dFf311ba12DA996A925Ab33Eac6A` |
